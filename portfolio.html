@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arya Mhatre — Portfolio</title>
+  <!-- Google font (link left as-is for production) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav class="nav-glass">
+    <a href="#home" class="logo">ARYA<span>MHATRE</span></a>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+    <label for="nav-toggle" class="hamburger" aria-hidden="true"><span></span><span></span><span></span></label>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certs">Drawings</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="#contact" class="hire-btn">Hire Me</a>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-left">
+      <p class="eyebrow">Designer • Aspiring Developer</p>
+      <h1 class="hero-title">Hi, I’m <span>Arya Mhatre</span></h1>
+      <p class="lead">
+        I bring ideas to life with art and code — clean UI, simple interactions, and playful micro-animations.
+      </p>
+
+      <div class="buttons">
+        <a href="#projects" class="btn primary">View Projects</a>
+        <a href="#contact" class="btn ghost">Contact Me</a>
+      </div>
+
+      <div class="socials">
+        <a href="#" class="social">LinkedIn</a>
+        <a href="#" class="social">GitHub</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <!-- decorative blob + portrait placeholder -->
+      <div class="blob"></div>
+      <div class="portrait">
+  <img src="arya_pfp.jpg" alt="Arya Mhatre Portrait">
+</div>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="about-left">
+      <h2>About <span>Me</span></h2>
+      <p class="muted">
+        I’m 18 and passionate about design and digital creation. I started with drawing and moved to crafting
+        small web interactions. I like clean layouts, subtle motion and code that behaves.
+      </p>
+      <p class="muted">
+        I experiment with HTML, CSS and JavaScript, and tinker with Python when I want logical fun. I'm available
+        for small freelance projects and collaborations.
+      </p>
+    </div>
+
+    <aside class="facts card">
+      <h3>Quick Facts</h3>
+      <ul>
+        <li>Based in India</li>
+        <li>Designer first, developer second</li>
+        <li>Open for small freelance collaborations</li>
+      </ul>
+    </aside>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="skills">
+    <h2>Skills & <span>Expertise</span></h2>
+    <div class="skill-grid">
+      <div class="skill-card card">
+        <h3>Frontend</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS (Flex/Grid)</li>
+          <li>JavaScript Basics</li>
+        </ul>
+      </div>
+
+      <div class="skill-card card">
+        <h3>Design</h3>
+        <ul>
+          <li>Figma</li>
+          <li>Canva</li>
+          <li>Visual Storytelling</li>
+        </ul>
+      </div>
+
+      <div class="skill-card card">
+        <h3></h3>
+        <ul>
+          <li>Python (Beginner)</li>
+          <li>Problem Solving</li>
+        </ul>
+      </div>
+
+      <div class="skill-card card">
+        <h3>Soft Skills</h3>
+        <ul>
+          <li>Curiosity</li>
+          <li>Collaboration</li>
+          <li>Consistency</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="projects">
+    <h2>My <span>Projects</span></h2>
+    <p class="muted">Small creative experiments and design showcases.</p>
+
+    <div class="projects-grid">
+      <div class="project-card card">
+        <img src="eco.jpeg" alt="project1" />
+        <div class="content">
+          <span class="tag">CSS • JS • HTML</span>
+          <h3>EcoBinny</h3>
+          <p>AI-based waste management app for a cleaner future.</p>
+        </div>
+      </div>
+
+      <div class="project-card card">
+        <img src="natyaAI.jpeg" alt="project2" />
+        <div class="content">
+          <span class="tag">CSS</span>
+          <h3>NatyaAI</h3>
+          <p>AI mudra detection app for Bharatanatyam posture analysis.</p>
+        </div>
+      </div>
+
+      <div class="project-card card">
+        <img src="FG.png" alt="project3" />
+        <div class="content">
+          <span class="tag">JavaScript • Python</span>
+          <h3>FraudGuard</h3>
+          <p>An app for wealth management & fraud detection assistance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATES -->
+  <section id="certs" class="certs">
+    <h2>Certificates & <span>Drawings</span></h2>
+    <div class="cert-grid">
+      <div class="cert-card card">
+        <img src="20250930_212804.jpg" alt="cert1" />
+        <h4>The Watcher</h4>
+        <p></p>
+      </div>
+
+      <div class="cert-card card">
+        <img src="20250930_212745.jpg" alt="cert2" />
+        <h4>Sea Wonderer</h4>
+        <p></p>
+      </div>
+
+      <div class="cert-card card">
+        <img src="20250930_212737.jpg" alt="cert3" />
+        <h4>Whiskers in 3D</h4>
+        <p></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements" class="achievements">
+    <h2>Notable <span>Achievements</span></h2>
+    <p class="muted">Highlights that showcase my dedication and growth.</p>
+
+    <div class="achieve-grid">
+      <div class="achieve-card card">
+        <h3>🏆 Elocution Runner-Up</h3>
+        <p>Runner-up in a college-level elocution competition.</p>
+        <span class="muted">2025</span>
+      </div>
+
+      <div class="achieve-card card">
+        <h3>💡 Hackathon Finalist</h3>
+        <p>Built a sustainability-focused app that reached the finals of a college hackathon.</p>
+        <span class="muted">2025</span>
+      </div>
+
+      <div class="achieve-card card">
+        <h3>🎨 Art Exhibition</h3>
+        <p>Displayed original digital artwork at a local youth exhibition.</p>
+        <span class="muted">2023</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+ <section id="contact" class="contact-section">
+    <h2>Let’s <span>Connect</span></h2>
+    <div class="contact">
+      <form class="card">
+        <input type="text" placeholder="Your Name" />
+        <input type="email" placeholder="Your Email" />
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="button" class="btn primary">Send Message</button>
+      </form>
+
+      <div class="get-in-touch">
+  <h3>Get in Touch</h3>
+  <p class="muted">Connect with me on any of these platforms:</p>
+
+  <div class="icon-links">
+  <a href="mailto:aryamhatre0803@gmail.com" class="icon-btn" title="Email"><i class="fas fa-envelope"></i></a>
+  <a href="https://linkedin.com/in/arya" class="icon-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+  <a href="https://www.instagram.com/arya.mhatre" class="icon-btn" title="Instagram"><i class="fab fa-instagram"></i></a>
+  <a href="https://github.com/aryamhatre0803" class="icon-btn" title="GitHub"><i class="fab fa-github"></i></a>
+</div>
+
+</div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="muted">© 2025 Arya Mhatre — All rights reserved.</p>
+  </footer>
+</body>
+</html>

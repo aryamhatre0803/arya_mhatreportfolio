@@ -1,0 +1,250 @@
+/* Aesthetic update for Arya's portfolio */
+/* Variables */
+:root{
+  --bg: linear-gradient(180deg,#071021 0%, #0d0d0d 100%);
+  --card-bg: rgba(255,255,255,0.03);
+  --glass: rgba(255,255,255,0.04);
+  --accent: linear-gradient(90deg,#5ee7df,#b490ca);
+  --accent-solid: #7cc6ff;
+  --muted: #9aa0a6;
+  --text: #eaeef3;
+  --radius: 14px;
+}
+
+/* Base */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.55;
+}
+
+/* NAV */
+.nav-glass{
+  position:sticky;
+  top:12px;
+  z-index:100;
+  display:flex;
+  gap:1rem;
+  align-items:center;
+  justify-content:space-between;
+  padding:0.75rem 1.25rem;
+  margin:0 1rem;
+  border-radius:30px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  box-shadow: 0 6px 30px rgba(2,6,23,0.6);
+  backdrop-filter: blur(8px) saturate(120%);
+  border:1px solid rgba(255,255,255,0.04);
+}
+
+/* Logo */
+.logo{font-weight:800;letter-spacing:0.6px;text-decoration:none;color:var(--text);}
+.logo span{color:transparent;background:var(--accent);-webkit-background-clip:text;background-clip:text;}
+
+/* Nav links */
+.nav-links{display:flex;gap:1rem;list-style:none;margin:0;padding:0;align-items:center;}
+.nav-links a{color:var(--text);text-decoration:none;padding:0.4rem 0.6rem;border-radius:8px;font-weight:600;opacity:0.95}
+.nav-links a:hover{color:var(--accent-solid);transform:translateY(-2px)}
+
+/* Hamburger for small screens */
+.nav-toggle{display:none}
+.hamburger{display:none;cursor:pointer}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text);margin:4px 0;border-radius:2px;opacity:0.9}
+
+/* CTA */
+.hire-btn{background:linear-gradient(90deg,#6ee7ff,#8d7cff);padding:0.5rem 0.9rem;border-radius:10px;color:#041028;text-decoration:none;font-weight:700}
+
+/* SECTION LAYOUT */
+section{max-width:1100px;margin:2.5rem auto;padding:2.5rem 1rem;border-radius:12px}
+.eyebrow{font-weight:600;color:var(--muted);margin:0 0 0.5rem}
+
+/* HERO */
+.hero{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center;padding-top:1.25rem;padding-bottom:1.25rem}
+.hero-left{padding:1rem 0}
+.hero-title{font-size:2.4rem;margin:0 0 0.6rem;line-height:1.05}
+.hero-title span{background:var(--accent);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:900}
+.lead{color:var(--muted);max-width:52ch}
+
+/* Buttons */
+.btn{display:inline-block;padding:0.7rem 1.1rem;border-radius:12px;text-decoration:none;font-weight:700}
+.btn.primary{background:linear-gradient(90deg,#6ee7ff,#8d7cff);color:#041028}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text)}
+
+/* Socials */
+.socials{margin-top:1rem;display:flex;gap:0.75rem}
+.social{font-weight:600;color:var(--muted);text-decoration:none}
+
+/* HERO RIGHT — blob & portrait */
+.hero-right{position:relative;height:320px;display:flex;align-items:center;justify-content:center}
+.blob{
+  position:absolute;
+  right:0;
+  top:10px;
+  width:320px;
+  height:320px;
+  border-radius:45% 55% 60% 40%/45% 60% 40% 55%;
+  background:linear-gradient(135deg,#5ee7df,#b490ca);
+  filter:blur(18px);
+  transform:rotate(10deg);
+  mix-blend-mode:screen;
+  opacity:0.95;
+  animation:float 6s ease-in-out infinite;
+}
+
+.portrait {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.05);
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(2,6,23,0.6);
+}
+.portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+.portrait:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.15);
+}
+
+/* Cards & small components */
+.card{background:var(--card-bg);border-radius:var(--radius);padding:1rem;border:1px solid rgba(255,255,255,0.03)}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:1fr 340px;gap:1.5rem;align-items:start}
+.muted{color:var(--muted)}
+
+/* SKILLS */
+.skills h2,.projects h2,.certs h2,.achievements h2{margin:0 0 0.75rem;font-size:1.6rem}
+.skill-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
+.skill-card h3{margin:0 0 0.6rem}
+.skill-card ul{margin:0;padding:0;list-style:none;color:var(--muted)}
+
+/* PROJECTS */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.project-card img{width:100%;height:160px;object-fit:cover;border-radius:10px 10px 0 0}
+.project-card .content{padding:0.8rem}
+.tag{display:inline-block;font-size:12px;padding:0.25rem 0.5rem;border-radius:999px;background:rgba(255,255,255,0.03);color:var(--muted);font-weight:700;margin-bottom:0.5rem}
+
+/* CERTS */
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.cert-card img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+
+/* ACHIEVEMENTS */
+.achieve-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.achieve-card h3{margin:0 0 0.5rem;font-size:1.05rem}
+
+/* CONTACT */
+.contact{display:grid;grid-template-columns:1fr 340px;gap:1rem;align-items:start}
+.contact input,.contact textarea{width:100%;padding:0.7rem;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--text);resize:vertical;font-family:inherit}
+.contact button{width:100%;padding:0.8rem;border-radius:10px;border:none;font-weight:800}
+
+/* INTERACTIVE ICON BUTTONS */
+.icon-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #eaeef3;
+  text-decoration: none;
+  font-size: 1.4rem;
+  transition: all 0.35s ease;
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+
+.icon-btn::before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  background: linear-gradient(135deg, rgba(124, 198, 255, 0.2), rgba(180, 144, 202, 0.2));
+  top: -50%;
+  left: -50%;
+  opacity: 0;
+  transition: all 0.5s ease;
+  border-radius: 50%;
+}
+
+.icon-btn:hover::before {
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+.icon-btn:hover {
+  transform: scale(1.12);
+  color: #7cc6ff;
+  box-shadow: 0 0 15px rgba(124, 198, 255, 0.4);
+  animation: pulse 1.3s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 10px rgba(124, 198, 255, 0.3); }
+  50% { box-shadow: 0 0 25px rgba(124, 198, 255, 0.6); }
+}
+
+/* FOOTER */
+footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:0.95rem}
+
+/* Hover & interactions */
+.project-card:hover{transform:translateY(-6px);transition:transform 300ms ease;box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+.card{transition:transform 240ms ease, box-shadow 240ms ease}
+.card:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(2,6,23,0.5)}
+
+/* Animations */
+@keyframes float{
+  0%{transform:translateY(0) rotate(8deg)}
+  50%{transform:translateY(-14px) rotate(4deg)}
+  100%{transform:translateY(0) rotate(8deg)}
+}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;gap:1rem;padding-bottom:0.7rem}
+  .about{grid-template-columns:1fr}
+  .contact{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .hamburger{display:block}
+  .nav-toggle:checked + .hamburger + .nav-links{
+    display:flex;
+    position:absolute;
+    left:1rem;
+    top:74px;
+    flex-direction:column;
+    background:var(--glass);
+    padding:0.8rem;
+    border-radius:12px;
+  }
+  .hero-right{height:260px}
+}
+
+/* Small polish */
+a{transition:all 180ms ease}
